@@ -24,9 +24,6 @@ export default function Home({ isConnected }) {
             for instructions.
           </h2>
         )}
-
-      <footer className={styles.footer}>
-      </footer>
     </div>
   )
 }
