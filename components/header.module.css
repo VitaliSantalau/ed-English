@@ -23,23 +23,15 @@
 .authentification {
   display: flex;
   justify-content: space-evenly;
-  
-}
-
-.account {
-  color: #ffffff;
-  cursor: pointer;
-  margin: .5em;
-}
-
-.account:hover, .login:hover {
-  color: #0076ffe6;
 }
 
 .login {
   color: #ffffff;
-  cursor: pointer;
   margin: .5em;
+}
+
+.login:hover {
+  color: #0076ffe6;
 }
 
 .secondlevel {

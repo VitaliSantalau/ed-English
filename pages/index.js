@@ -8,7 +8,7 @@ export default function Home({ isConnected }) {
     <div className={styles.container}>
       <Head>
         <title>Learn English with Ed</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" /> 
       </Head>
       <Header />
       <main className={styles.main}>
