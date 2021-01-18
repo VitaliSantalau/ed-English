@@ -1,8 +1,11 @@
+import React from 'react'
+import { signIn, signOut, useSession } from 'next-auth/client'
 import style from './header.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Header() {
+  const [ session, loading ] = useSession()
 
   return (
     <header className={style.header}>
@@ -17,9 +20,15 @@ export default function Header() {
           <div className={style.account}>
             Account
           </div>
-          <div className={style.login}> 
+        {!session && <>
+          <div className={style.login} onClick={signIn}> 
             Log in
           </div>
+        </>}    
+        {session && <>
+        Signed in as {session.user.email} <br/>
+          <button onClick={signOut}>Sign out</button>
+         </>} 
         </div>
       </div>
       <div className={style.secondlevel}>
@@ -39,7 +48,7 @@ export default function Header() {
         </Link>
       </div>
       
-      
+
     </header>
   )
 }

@@ -35,3 +35,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 
 npm install mongodb
+npm install --save next-auth
