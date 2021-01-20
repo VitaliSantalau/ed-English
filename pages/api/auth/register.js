@@ -1,5 +1,5 @@
 import connectDB from '../../../utils/connectDB'
-import User from '../../../models/userModel'
+import Users from '../../../models/userModel'
 import valid from '../../../utils/valid'
 import bcrypt from 'bcrypt'
 
@@ -20,13 +20,16 @@ const register = async (req, res) => {
     const errMsg = valid(name, email, password, cf_password)
     if(errMsg) return res.status(400).json({err: errMsg})
 
+    const checkUser = await Users.findOne({ email })
+    if(checkUser) return res.status(400).json({err: 'This email already exists'})
+
     const passwordHash =await bcrypt.hash(password, 12)
 
     const newUser = new Users({
       name, email, password: passwordHash, cf_password
     })
-
-    console.log(newUser)
+    
+    await newUser.save()
     res.json({msg: "Register success"})
 
   } catch (error) {
