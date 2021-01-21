@@ -36,4 +36,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 npm install mongodb
 npm install --save next-auth
+
+-------
 npm i mongoose bcrypt jsonwebtoken
+https://passwordsgenerator.net/ for "ACCESS_TOKEN_SECRET"
+npm i js-cookie
+
