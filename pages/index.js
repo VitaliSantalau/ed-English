@@ -6,7 +6,7 @@ export default function Home({ isConnected }) {
     <Layout>
       <main>
       <div>Hi</div>
-      {isConnected && <div>connected with mongoDB</div>}
+      {isConnected && <div>connected with mongoDB...FUCK</div>}
       </main>
     </Layout>
   )
