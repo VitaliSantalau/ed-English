@@ -1,4 +1,4 @@
 
 export default function Footer() {
-  return <p>header</p>
+  return <p>footer</p>
 }

@@ -1,12 +1,21 @@
 import { connectToMongodb } from '../utils/connectToMongodb'
 import Layout from '../components/layout'
 
-export default function Home({ isConnected }) {
+export default function Home({ users }) {
+  
+
+  
   return (
     <Layout>
       <main>
       <div>Hi</div>
-      {isConnected && <div>connected with mongoDB...FUCK</div>}
+      {users.map((user) => (
+        <div>
+        <div>{user.name}</div>
+        <div>{user.email}</div>
+        </div>
+      ))}
+      <button>click</button>
       </main>
     </Layout>
   )
@@ -14,11 +23,14 @@ export default function Home({ isConnected }) {
 
       
 export async function getServerSideProps(context) {
-  const { client } = await connectToMongodb()
-
-  const isConnected = await client.isConnected() // Returns true or false
+  
+  const { db } = await connectToMongodb();
+  
+  const users = await db.collection("users").find({}).toArray();
 
   return {
-    props: { isConnected },
-  }
+    props: {
+      users: JSON.parse(JSON.stringify(users)),
+    },
+  };
 }
