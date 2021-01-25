@@ -2,27 +2,21 @@ import { connectToMongodb } from '../utils/connectToMongodb'
 import Layout from '../components/layout'
 
 
+
 export default function Home({ users }) {
 
-/*const res = await postData('auth/register', userData) 
-
-
-  export const postData = async (url='auth/register', userData) => {
-    const res = await fetch(`${baseUrl}/api/${url}`, {
-      method: 'POST',
+  const postData = async () => {
+    const res = await fetch("http://localhost:3000/api/input"/*, {
+      /*method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(userData)
-    })
+      }
+    }*/ 
+    )
   
-    const data = await res.json()
-    return data
   }
  
-connectToMongodb ()
-
-  const register = async (req, res) => {
+  /*const register = async (req, res) => {
     try {
       const { name} = req.body
 
@@ -38,7 +32,7 @@ connectToMongodb ()
     }
   }*/
 
-
+  
 
 
   return (
@@ -52,21 +46,17 @@ connectToMongodb ()
         <div>{user.email}</div>
         </div>
       ))}
-      <button >click</button>
+      <button onClick={postData} >click</button>
       </main>
     </Layout>
   )
 }
 
-
-
       
 export async function getServerSideProps(context) {
   
   const { db } = await connectToMongodb();
-  
   const users = await db.collection("users").find({}).toArray();
-
   return {
     props: {
       users: JSON.parse(JSON.stringify(users))
