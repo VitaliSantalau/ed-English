@@ -1,7 +1,6 @@
 .container {
-  width: 3em;
-  height: 2em;
-  text-align: center;
-  background-color: #ffffff;
+  padding: .2em;
+  margin-left: 1em;
+  color: #ffffff;
   border: 1px solid #ffffff;
 }

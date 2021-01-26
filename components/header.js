@@ -1,5 +1,7 @@
-import Logo from './logo'
 import style from './header.module.css'
+import Logo from './logo'
+import AuthNav from './authNav'
+
 
 export default function Header() {
   return (
@@ -7,7 +9,8 @@ export default function Header() {
       <Logo />    
       <div className={style.slogan}>
           Learn English by just thinking English
-        </div>  
+      </div>
+      <AuthNav />  
     </header>
   )
 }
