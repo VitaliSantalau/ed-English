@@ -2,21 +2,25 @@ import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
 
 const options = {
-  // Configure one or more authentication providers
+  site: process.env.NEXTAUTH_URL,
   providers: [
     Providers.Email({
-      server: process.env.EMAIL_SERVER, 
+      server: {
+        port: 465,
+        host: 'smtp.gmail.com',
+        secure: true,
+        auth: {
+          user: process.env.EMAIL_USERNAME,
+          pass: process.env.EMAIL_PASSWORD,
+        },
+        tls: {
+          rejectUnauthorized: false,
+        },
+      },
       from: process.env.EMAIL_FROM,
-    }),
-    Providers.Google({
-      clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_SECRET
     })
-    // ...add more providers here
   ],
-
-  // A database is optional, but required to persist accounts in a database
-  database: process.env.MONGODB_URI,
+  database: process.env.DATABASE_URL,
 }
 
 export default (req, res) => NextAuth(req, res, options)

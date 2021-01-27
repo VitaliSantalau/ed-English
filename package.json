@@ -7,10 +7,14 @@
     "start": "next start"
   },
   "dependencies": {
-    "mongodb": "^3.5.9",
+    "mongodb": "^3.6.3",
     "next": "latest",
     "next-auth": "^3.1.0",
+    "nodemailer": "^6.4.17",
+    "npm-force-resolutions": "0.0.3",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.28"
   }
 }

@@ -10,7 +10,7 @@ export default function Home() {
     <Layout>
       <Header />
       <main>
-      <div>Hi</div>
+      <div>Hi, man</div>
       </main>
     </Layout>
   )
