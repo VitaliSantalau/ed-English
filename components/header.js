@@ -11,6 +11,23 @@ export default function Header() {
           Learn English by just thinking English
       </div>
       <AuthNav />  
+
+      <div className={style.secondlevel}>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+        <Link href="/">
+          <a>Blog</a>
+        </Link>
+        <Link href="/">
+          <a>Exercises</a>
+        </Link>
+        <Link href="/">
+          <a>
+            <button className={style.buttonTests}>get tests</button>
+          </a>
+        </Link>
+      </div>
     </header>
   )
 }
