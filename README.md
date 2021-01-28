@@ -4,6 +4,11 @@ npm install --save next-auth
 
 npm i mongodb
 npm install typeorm --save
-npm i typeorm@0.2.28 - temporarily
+npm i typeorm@0.2.28 - temporarily for fix error
+npm i mongodb --save-optional - fix error
 
-npm install nodemailer
+
+
+EMAIL_FROM= Ed-English <edenglishmail@gmail.com>
+EMAIL_USERNAME=edenglishmail@gmail.com
+EMAIL_PASSWORD=ed1234567890english
