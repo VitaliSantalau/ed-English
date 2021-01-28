@@ -1,6 +1,7 @@
 import style from './header.module.css'
 import Logo from './logo'
 import AuthNav from './authNav'
+import Link from 'next/link'
 
 
 export default function Header() {
