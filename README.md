@@ -1,11 +1,16 @@
 const baseUrl = process.env.BASE_URL
 
-npm install --save next-auth
+
 
 npm i mongodb
-npm install typeorm --save
-npm i typeorm@0.2.28 - temporarily for fix error
-npm i mongodb --save-optional - fix error
+
+## ---------
+
+NEXTAUTH_URL=http://localhost:3000
+
+MONGODB_URI = mongodb+srv://VitaliSantalau:o60QmfLyOYtjPLrP@cluster0.efytr.mongodb.net/ed-database?retryWrites=true&w=majority
+MONGODB_DB = ed-database
+
 
 DATABASE_URL = mongodb+srv://VitaliSantalau:o60QmfLyOYtjPLrP@cluster0.efytr.mongodb.net/ed-database
 
