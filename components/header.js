@@ -14,9 +14,7 @@ export default function Header() {
         </div>
         <AuthNav />
       </div>
-      <div className={style.secondLevel}>
-        <PageNav />
-      </div>      
+      <PageNav />      
     </header>
   )
 }

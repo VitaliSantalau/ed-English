@@ -2,41 +2,19 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  
+  align-items: center;
+}
+
+.firstLevel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em;
   background-color: #000000;
 }
 
 .slogan {
   font-size: 1.3em;
   color: #ffffff;
-}
-
-.secondlevel {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: gray;
-}
-
-.secondlevel > * {
-  margin: 1em 2em;
-}
-
-.secondlevel > a:hover {
-  color: #000000;
-}
-
-.buttonTests {
-  height: 2em;
-  font-size: 1.2em;
-  background-color: #0076ffe6;
-  color: #ffffff;
-  border: 1px solid #0076ffe6;
-  border-radius: .2em;
-}
-
-.buttonTests:hover {
-  background-color: #ffffff;
-  color:#0076ffe6;
 }
