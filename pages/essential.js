@@ -5,21 +5,25 @@ import Header from '../components/header'
 import Image from 'next/image'
 import { useReducer, useState } from 'react'
 
-const initialState = {}
+const initialState = { result: ""}
 
 function reducer(state, action) {
   switch (action.type) {
     case 'correct':
       return (
+        { result : 
         <div className={style.containerCorrect}>
           <p>correct</p>
         </div>
+        }
       )
     case 'wrong':
       return (
-        <div className={style.containerWrongWord}>
-          <p>wrong</p>
-        </div>
+        { result : 
+          <div className={style.containerWrong}>
+            <p>wrong</p>
+          </div>
+          }
       )
     default:
       throw new Error();
@@ -34,6 +38,15 @@ export default function Essential() {
 
   const hadleRemoveShield = () => {
     setclassShield(style.shieldHelpWordsOpen)
+  }
+
+  const handleCheckAnswer = () => {
+    const correctAnswer = "correct"
+    if(correctAnswer === "correct") {
+      return dispatch({type: "correct"})
+    } else {
+      return dispatch({type: "wrong"})
+    }
   }
 
   return (
@@ -56,7 +69,7 @@ export default function Essential() {
               <button 
                 type="submit" 
                 className={style.checkButton}
-                onClick={() => dispatch({type: "correct"})}
+                onClick={handleCheckAnswer}
               >check</button>
               <button 
                 className={style.helpButton} 
@@ -70,9 +83,7 @@ export default function Essential() {
                 <p>table</p>
                 <p>chair</p>
               </div>  
-              <div className={style.containerCorrect}>
-          <p>correct</p>
-        </div>            
+              {state.result}  
             </div>
           </div>
         </div>
