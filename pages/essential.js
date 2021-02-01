@@ -5,40 +5,43 @@ import Header from '../components/header'
 import Image from 'next/image'
 import { useReducer, useState } from 'react'
 
-const initialState = { result: ""}
+const initialState = { 
+  result: "",
+  classShiled: style.shieldHelpWordsClose
+}
 
 function reducer(state, action) {
   switch (action.type) {
     case 'correct':
-      return (
-        { result : 
-        <div className={style.containerCorrect}>
-          <p>correct</p>
-        </div>
-        }
-      )
+      return {
+        ...state, 
+        result : 
+          <div className={style.containerCorrect}>
+            <p>correct</p>
+          </div>
+      }
     case 'wrong':
-      return (
-        { result : 
+      return {
+        ...state, 
+        result : 
           <div className={style.containerWrong}>
             <p>wrong</p>
           </div>
-          }
-      )
+      }
+    case 'open shield':
+      return {
+        ...state, 
+        classShiled: style.shieldHelpWordsOpen 
+      }
+      
     default:
       throw new Error();
   }
 }
 
 export default function Essential() {
-
-  const [classShield, setclassShield] = useState(style.shieldHelpWordsClose)
   
   const [state, dispatch] = useReducer(reducer, initialState) 
-
-  const hadleRemoveShield = () => {
-    setclassShield(style.shieldHelpWordsOpen)
-  }
 
   const handleCheckAnswer = () => {
     const correctAnswer = "correct"
@@ -73,7 +76,7 @@ export default function Essential() {
               >check</button>
               <button 
                 className={style.helpButton} 
-                onClick={hadleRemoveShield}
+                onClick={() => dispatch({ type: 'open shield' })}
               >help</button>
               <div className={style.containerHelpWords}>
                 <div className={classShield}></div>
