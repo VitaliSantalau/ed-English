@@ -3,21 +3,35 @@ import { connectToMongodb } from '../utils/connectToMongodb'
 import Layout from '../components/layout'
 import Header from '../components/header'
 import Image from 'next/image'
-import { useReducer, useState } from 'react'
+import { useReducer } from 'react'
 
 const initialState = { 
+  userAnswer: "",
   result: "",
-  classShiled: style.shieldHelpWordsClose
+  classShield: style.shieldHelpWordsClose,
 }
 
 function reducer(state, action) {
   switch (action.type) {
+    case 'input user answer':
+      return {
+        ...state, 
+        userAnswer : action.payload
+      }
     case 'correct':
       return {
         ...state, 
         result : 
           <div className={style.containerCorrect}>
             <p>correct</p>
+          </div>
+      }
+    case 'correct with help':
+      return {
+        ...state, 
+        result : 
+          <div className={style.containerCorrect}>
+            <p>correct with help</p>
           </div>
       }
     case 'wrong':
@@ -31,25 +45,43 @@ function reducer(state, action) {
     case 'open shield':
       return {
         ...state, 
-        classShiled: style.shieldHelpWordsOpen 
-      }
-      
+        classShield: style.shieldHelpWordsOpen
+      }  
     default:
       throw new Error();
   }
 }
 
 export default function Essential() {
-  
+ 
   const [state, dispatch] = useReducer(reducer, initialState) 
 
-  const handleCheckAnswer = () => {
-    const correctAnswer = "correct"
-    if(correctAnswer === "correct") {
-      return dispatch({type: "correct"})
+  const handleChangeInput= e => {
+    dispatch({
+      type: "input user answer",
+      payload: e.target.value
+    })
+  }
+  
+  const handleCheckAnswer = () => { 
+    const correctAnswer = "table"
+    let isCorrectAnswer
+    if(state.userAnswer === correctAnswer) {
+      isCorrectAnswer = true
     } else {
-      return dispatch({type: "wrong"})
+      isCorrectAnswer = false
     }
+    
+    switch (isCorrectAnswer) {
+      case true:
+        if(state.classShield === style.shieldHelpWordsClose) {
+          return dispatch({type: "correct"})
+        } else {
+          return dispatch({type: "correct with help"})
+        }
+      case false:
+        return dispatch({type: "wrong"})
+    }    
   }
 
   return (
@@ -68,7 +100,12 @@ export default function Essential() {
                   height={120}
                 />
               </div>
-              <input type="text" />
+              <input 
+                type="text"
+                name="userAnswer"
+                value={state.userAnswer}
+                onChange={handleChangeInput} 
+              />
               <button 
                 type="submit" 
                 className={style.checkButton}
@@ -79,7 +116,7 @@ export default function Essential() {
                 onClick={() => dispatch({ type: 'open shield' })}
               >help</button>
               <div className={style.containerHelpWords}>
-                <div className={classShield}></div>
+                <div className={state.classShield}></div>
                 <p>window</p>
                 <p>tree</p>
                 <p>yellow</p>
