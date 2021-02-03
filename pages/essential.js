@@ -65,7 +65,7 @@ export default function Essential({ data }) {
   }
   
   const handleCheckAnswer = () => { 
-    const correctAnswer = data.essentialEnglishWord.correctAnswer
+    const correctAnswer = "table"
     let isCorrectAnswer
     if(state.userAnswer === correctAnswer) {
       isCorrectAnswer = true
@@ -127,8 +127,6 @@ export default function Essential({ data }) {
               {state.result}  
             </div>
           </div>
-          <div>{JSON.stringify(data.essentialEnglishWord.correctAnswer)}</div>;
-          <div>{data.essentialEnglishWord.correctAnswer}</div>
         </div>
       </main>
     </Layout>
