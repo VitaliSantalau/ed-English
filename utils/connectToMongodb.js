@@ -1,4 +1,5 @@
 /*https://github.com/vercel/next.js/tree/master/examples/with-mongodb*/
+/* npm i mongodb */
 
 import { MongoClient } from 'mongodb'
 

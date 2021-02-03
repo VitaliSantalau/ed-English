@@ -1,5 +1,6 @@
 import style from '../styles/essential.module.css'
-import { connectToMongodb } from '../utils/connectToMongodb'
+import { request } from "../utils/connectToDatoCMS";
+/*import { connectToMongodb } from '../utils/connectToMongodb'*/
 import Layout from '../components/layout'
 import Header from '../components/header'
 import Image from 'next/image'
@@ -52,7 +53,7 @@ function reducer(state, action) {
   }
 }
 
-export default function Essential() {
+export default function Essential({ data }) {
  
   const [state, dispatch] = useReducer(reducer, initialState) 
 
@@ -64,7 +65,7 @@ export default function Essential() {
   }
   
   const handleCheckAnswer = () => { 
-    const correctAnswer = "table"
+    const correctAnswer = data.essentialEnglishWord.correctAnswer
     let isCorrectAnswer
     if(state.userAnswer === correctAnswer) {
       isCorrectAnswer = true
@@ -126,14 +127,36 @@ export default function Essential() {
               {state.result}  
             </div>
           </div>
+          <div>{JSON.stringify(data.essentialEnglishWord.correctAnswer)}</div>;
+          <div>{data.essentialEnglishWord.correctAnswer}</div>
         </div>
       </main>
     </Layout>
   )
 }
 
-      
+ 
+const MY_QUERY = `
+  query MyQuery {
+    essentialEnglishWord {
+      correctAnswer
+    }
+  }
+`;
 
+
+export async function getStaticProps() {
+  const data = await request({
+    query: MY_QUERY,
+    variables: { limit: 1 }
+  });
+  return {
+    props: { data }
+  };
+}
+
+
+/*
 export async function getServerSideProps(context) {
   const { db } = await connectToMongodb();
   const users = await db.collection("users").find({}).toArray();
@@ -142,4 +165,4 @@ export async function getServerSideProps(context) {
       users: JSON.parse(JSON.stringify(users))
     },
   };
-}
+}*/
