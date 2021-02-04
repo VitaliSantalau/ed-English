@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import Header from '../components/header'
 /*import Image from 'next/image'*/
 import { useReducer } from 'react'
+import EssentialNav from '../components/essentialNav';
 
 const initialState = { 
   userAnswer: "",
@@ -93,6 +94,8 @@ export default function Essential({ data }) {
       <Header />
       <main className={style.main}>
         <div className={style.wrapper}>
+          <EssentialNav />
+          <section>
           <h3>Essential English words</h3>
           <div className={style.containerWords}>
             <div className={style.containerWord}>
@@ -121,6 +124,7 @@ export default function Essential({ data }) {
               {state.result}  
             </div>
           </div>
+          </section>
         </div>
       </main>
     </Layout>

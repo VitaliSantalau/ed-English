@@ -12,10 +12,16 @@ export default function PageNav() {
         <a>Essential</a>
       </Link>
       <Link href="/">
+        <a>Good for you</a>
+      </Link>
+      <Link href="/">
+        <a>Fluent</a>
+      </Link>
+      <Link href="/">
         <a>Blog</a>
       </Link>
       <Link href="/">
-        <a>Exercises</a>
+        <a>Teacher</a>
       </Link>
       <Link href="/">
         <a>
