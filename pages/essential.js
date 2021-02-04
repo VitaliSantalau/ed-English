@@ -1,9 +1,10 @@
 import style from '../styles/essential.module.css'
 import { request } from "../utils/connectToDatoCMS";
+import { Image } from "react-datocms";
 /*import { connectToMongodb } from '../utils/connectToMongodb'*/
 import Layout from '../components/layout'
 import Header from '../components/header'
-import Image from 'next/image'
+/*import Image from 'next/image'*/
 import { useReducer } from 'react'
 
 const initialState = { 
@@ -65,7 +66,7 @@ export default function Essential({ data }) {
   }
   
   const handleCheckAnswer = () => { 
-    const correctAnswer = "table"
+    const correctAnswer = data.essentialEnglishWord.correctAnswer
     let isCorrectAnswer
     if(state.userAnswer === correctAnswer) {
       isCorrectAnswer = true
@@ -84,6 +85,8 @@ export default function Essential({ data }) {
         return dispatch({type: "wrong"})
     }    
   }
+  
+  const help = <div dangerouslySetInnerHTML={{__html: data.essentialEnglishWord.helpWords}} />;
 
   return (
     <Layout title="Essential English">
@@ -94,12 +97,7 @@ export default function Essential({ data }) {
           <div className={style.containerWords}>
             <div className={style.containerWord}>
               <div className={style.containerImg}>
-                <Image 
-                  src="/essential words/table.png"
-                  alt="Picture of the author"
-                  width={150}
-                  height={120}
-                />
+                <Image data={data.essentialEnglishWord.questionImage.responsiveImage} />
               </div>
               <input 
                 type="text"
@@ -118,11 +116,7 @@ export default function Essential({ data }) {
               >help</button>
               <div className={style.containerHelpWords}>
                 <div className={state.classShield}></div>
-                <p>window</p>
-                <p>tree</p>
-                <p>yellow</p>
-                <p>table</p>
-                <p>chair</p>
+                {help}
               </div>  
               {state.result}  
             </div>
@@ -137,7 +131,22 @@ export default function Essential({ data }) {
 const MY_QUERY = `
   query MyQuery {
     essentialEnglishWord {
+      questionImage {
+        responsiveImage(imgixParams: { fit: crop, w: 100, h: 80, auto: format }) {
+          alt
+          srcSet
+          webpSrcSet
+          sizes
+          src
+          width
+          height
+          aspectRatio
+          title
+          base64
+        }
+      }
       correctAnswer
+      helpWords
     }
   }
 `;
