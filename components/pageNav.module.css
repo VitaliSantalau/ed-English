@@ -1,17 +1,32 @@
 .container {
-  width: 100%;
+  width: 75%;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   color: gray;
 }
 
 .container > * {
-  margin: 1em 2em;
+  margin: 1em .5em;
 }
 
 .container > a:hover {
   color: #000000;
+}
+
+.buttonFeedback {
+  height: 2em;
+  padding: .2em;
+  color: gray;
+  background-color: #ffffff;
+  border: .1px solid rgb(216, 216, 216);
+  border-radius: .2em;
+}
+
+.buttonFeedback:hover {
+  color: #000000;
+  border: .1px solid #000000;
 }
 
 .buttonTests {

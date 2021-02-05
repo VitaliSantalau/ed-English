@@ -5,21 +5,33 @@ export default function EssentialNav() {
     
   return (
     <div className={style.container}>
-      <Link href="">
-        <a>Essential word</a>
+    <h3>Skills for survival</h3>
+    <div>
+    <div className={style.containerLink}>
+    <Link href="">
+        <a><h4>Getting started</h4></a>
       </Link>
       <Link href="">
-        <a>Essential gramma</a>
+        <a><h4>Essential words</h4></a>
+      </Link>
+        <div>read</div>
+        <div>write</div>
+        <div>speak</div>
+        <div>listen</div>
+      <Link href="">
+        <a><h4>Essential gramma</h4></a>
       </Link>
       <Link href="">
-        <a>Essential phrase</a>
+        <a><h4>Essential phrase</h4></a>
       </Link>
       <Link href="">
-        <a>Irregular verbs</a>
+        <a><h4>Irregular verbs</h4></a>
       </Link>
       <Link href="">
-        <a>Stable expressions</a>
+        <a><h4>Stable expressions</h4></a>
       </Link>
+    </div>
+    </div>
     </div>
   )
 }

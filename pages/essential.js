@@ -96,7 +96,7 @@ export default function Essential({ data }) {
         <div className={style.wrapper}>
           <EssentialNav />
           <section>
-          <h3>Essential English words</h3>
+          <h2 className={style.headerSection}>Essential English words / write</h2>
           <div className={style.containerWords}>
             <div className={style.containerWord}>
               <div className={style.containerImg}>

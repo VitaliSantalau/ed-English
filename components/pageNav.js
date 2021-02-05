@@ -25,6 +25,11 @@ export default function PageNav() {
       </Link>
       <Link href="/">
         <a>
+          <button className={style.buttonFeedback}>feedback</button>
+        </a>
+      </Link>
+      <Link href="/">
+        <a>
           <button className={style.buttonTests}>get tests</button>
         </a>
       </Link>

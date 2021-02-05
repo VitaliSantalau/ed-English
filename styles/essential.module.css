@@ -5,12 +5,12 @@
 }
 
 .wrapper {
-  width: 70%;
+  width: 75%;
   display: flex;
   
 }
 
-.wrapper > h3 {
+.headerSection {
   margin-bottom: 1em;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .containerImg {
-  background-color: rgb(184, 43, 43); 
+  border: 1px solid;
 }
 
 .checkButton {
