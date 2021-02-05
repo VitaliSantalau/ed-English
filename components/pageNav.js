@@ -20,7 +20,7 @@ export default function PageNav() {
       <Link href="/">
         <a>Blog</a>
       </Link>
-      <Link href="/">
+      <Link href="/teacher">
         <a>Teacher</a>
       </Link>
       <Link href="/">

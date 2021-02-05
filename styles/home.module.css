@@ -1,0 +1,50 @@
+.main {
+  height: 100%;
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  .containerGreeting {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .EdEnglish {
+    font-size: 5em;
+    font-weight: 700;
+    margin-bottom: 1em;
+  }
+
+  .text {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 2em;
+    color: rgb(216, 216, 216);
+  }
+
+  .teacherLink {
+    color: #0076ffe6;
+  }
+
+  .containerGoAhead {
+    font-size: 2em;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .goAhead {
+    margin-bottom: 1em;
+  }
+
+  .arrow {
+    padding: .1em .5em;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 50%;
+  }
+

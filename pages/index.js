@@ -1,11 +1,12 @@
+import style from '../styles/home.module.css'
 import { connectToMongodb } from '../utils/connectToMongodb'
 import Layout from '../components/layout'
 import Header from '../components/header'
+import Link from 'next/link'
 
 
 
 export default function Home() {
-
   /*
   const res = await postData('auth/register', userData)
 
@@ -51,8 +52,18 @@ const register = async (req, res) => {
   return (
     <Layout>
       <Header />
-      <main>
-        <div>Hi, man</div>
+      <main className={style.main}>
+        <section className={style.containerGreeting}>
+          <div className={style.EdEnglish}>Ed-English</div>
+          <div className={style.text}>A professional native speaker 
+            <Link href="/teacher">
+              <a className={style.teacherLink}> teacher </a>
+            </Link> 
+          from Birmingham gives you an EXCELLENT opportunity to improve or start learn English</div>
+        </section>
+        <section className={style.containerGoAhead}>
+         
+        </section>
       </main>
     </Layout>
   )
