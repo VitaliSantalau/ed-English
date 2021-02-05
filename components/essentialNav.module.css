@@ -14,3 +14,9 @@
 .containerLink > * {
   margin: 1em;
 }
+
+.dot {
+  color: gray;
+  margin-left: 1em;
+  margin-right: .5em;
+}

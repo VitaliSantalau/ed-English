@@ -14,10 +14,10 @@ export default function EssentialNav() {
       <Link href="">
         <a><h4>Essential words</h4></a>
       </Link>
-        <div>read</div>
-        <div>write</div>
-        <div>speak</div>
-        <div>listen</div>
+        <div><span className={style.dot}>&#8226;</span>read</div>
+        <div><span className={style.dot}>&#8226;</span>write</div>
+        <div><span className={style.dot}>&#8226;</span>speak</div>
+        <div><span className={style.dot}>&#8226;</span>listen</div>
       <Link href="">
         <a><h4>Essential gramma</h4></a>
       </Link>
