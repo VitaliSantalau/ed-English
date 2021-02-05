@@ -3,6 +3,7 @@ import { connectToMongodb } from '../utils/connectToMongodb'
 import Layout from '../components/layout'
 import Header from '../components/header'
 import Link from 'next/link'
+import Footer from '../components/footer'
 
 
 
@@ -55,16 +56,26 @@ const register = async (req, res) => {
       <main className={style.main}>
         <section className={style.containerGreeting}>
           <div className={style.EdEnglish}>Ed-English</div>
-          <div className={style.text}>A professional native speaker 
+          <div className={style.textEdEnglish}>A professional native speaker 
             <Link href="/teacher">
               <a className={style.teacherLink}> teacher </a>
             </Link> 
           from Birmingham gives you an EXCELLENT opportunity to improve or start learn English</div>
         </section>
-        <section className={style.containerGoAhead}>
-         
+        <section className={style.containerhowItWorks}>
+          <div className={style.howItWorks}>How it works</div>
+          <div className={style.textHowItWorks}>The teaching concept is based on the natural human desire for evolution. Any kind of learning is evolution. So go ahead ...</div>
+          <div className={style.containerSteps}>
+            <div className={style.step}>step 1</div>
+            <div className={style.step}>step 2</div>
+            <div className={style.step}>step 3</div>
+            <div className={style.step}>step 4</div>
+            <div className={style.step}>step 5</div>
+            <div className={style.step}>step 6</div>
+          </div>
         </section>
       </main>
+      <Footer />
     </Layout>
   )
 }
