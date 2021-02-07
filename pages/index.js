@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import Header from '../components/header'
 import Link from 'next/link'
 import Footer from '../components/footer'
+import Typing from '../components/typingAnimation'
 
 
 
@@ -62,6 +63,7 @@ const register = async (req, res) => {
             </Link> 
           from Birmingham gives you an EXCELLENT opportunity to improve or start learn English</div>
         </section>
+        <Typing />
         <section className={style.containerhowItWorks}>
           <div className={style.howItWorks}>How it works</div>
           <div className={style.textHowItWorks}>The teaching concept is based on the natural human desire for evolution. Any kind of learning is evolution. So go ahead ...</div>
