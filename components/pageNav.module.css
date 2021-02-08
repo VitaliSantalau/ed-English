@@ -1,5 +1,6 @@
 .container {
   width: 75%;
+  font-size: 1.2em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

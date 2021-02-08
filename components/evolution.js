@@ -12,11 +12,11 @@ export default function Evolution() {
         <div className={style.containerImageIntroduction}>
           <div className={style.containerImage}>
             <Image 
-              src="/start.png"
+              src="/chelovek-drevnego-mira-first-step.jpg"
               alt="Picture of the author"
               layout="responsive"
-              width={100}
-              height={100}
+              width={120}
+              height={90}
             />
           </div>
           <div className={style.containerIntroduction}>
@@ -41,13 +41,13 @@ export default function Evolution() {
       </div>   
       <div className={style.stepSecond}>
         <div className={style.containerImageIntroduction}>
-          <div className={style.containerImage}>
+          <div className={style.containerImageSecond}>
             <Image 
-              src="/start.png"
+              src="/second.webp"
               alt="Picture of the author"
               layout="responsive"
-              width={100}
-              height={100}
+              width={300}
+              height={160}
             />
           </div>
           <div className={style.containerIntroduction}>
@@ -72,13 +72,13 @@ export default function Evolution() {
       </div>  
       <div className={style.stepThird}>
         <div className={style.containerImageIntroduction}>
-          <div className={style.containerImage}>
+          <div className={style.containerImageThird}>
             <Image 
-              src="/start.png"
+              src="/third.jpeg"
               alt="Picture of the author"
               layout="responsive"
-              width={100}
-              height={100}
+              width={300}
+              height={200}
             />
           </div>
           <div className={style.containerIntroduction}>
