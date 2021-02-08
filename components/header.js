@@ -1,7 +1,6 @@
 import style from './header.module.css'
 import Logo from './logo'
 import AuthNav from './authNav'
-import PageNav from './pageNav'
 
 
 export default function Header() {
@@ -14,7 +13,7 @@ export default function Header() {
         </div>
         <AuthNav />
       </div>
-      <PageNav />      
+           
     </header>
   )
 }

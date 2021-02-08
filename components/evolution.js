@@ -6,54 +6,101 @@ import Image from 'next/image'
 
 export default function Evolution() {
   
-
   return (
-    <div className={style.container}>
-      <div className={style.containerStepDescription}>
-        <div className={style.step}>
+    <div className={style.containerSteps}>
+      <div className={style.stepFirst}>
+        <div className={style.containerImageIntroduction}>
           <div className={style.containerImage}>
             <Image 
-              src="/table.png"
+              src="/start.png"
               alt="Picture of the author"
               layout="responsive"
-              width={1000}
-              height={1000}
+              width={100}
+              height={100}
             />
           </div>
-          <div className={style.stepName}>
-            <div>step 1, step 1, step 1, step 1, step 1, step 1, step 1,</div> 
-            <div>step 1, step 1, step 1, step 1, step 1, step 1, step 1</div>
+          <div className={style.containerIntroduction}>
+            <div className={style.headerStep}>
+              Here is point to START self evolution
+            </div> 
+            <div className={style.introductionStep}>
+              <div>Follow all parts of this section for survival in English speaker world</div>
+              <div>- strong vocabulary</div>
+              <div>- essential grammar</div>
+              <div>- common phrase</div>
+              <div>- and of cause irregular verb</div>
+            </div>
           </div>
         </div>
-        <div className={style.description}>
-          dflkdlfk dlfkldkf dfdl;fk; dlfm;elmv ;efm;ec ;eflm;lemf; lmdlmlmlm dfdnfjb sghbd kbjkbf kfb kb kbjbjkbkb kjbkkbk
+        <div className={style.descriptionStep}>
+          You can take a test to see how ready you are to take this part of evolution. 
+          But highly recommended follow all parts of this section. 
+          It's a base your knowledge.
+          A solid base will give you power in the next steps of evolution
         </div>
-      </div>
-      <div className={style.containerStepDescription}>
-        <div className={style.step}>
+      </div>   
+      <div className={style.stepSecond}>
+        <div className={style.containerImageIntroduction}>
           <div className={style.containerImage}>
             <Image 
-              src="/table.png"
+              src="/start.png"
               alt="Picture of the author"
               layout="responsive"
-              width={1000}
-              height={1000}
+              width={100}
+              height={100}
             />
           </div>
-          <div className={style.stepName}>
-            <div>step 1, step 1, step 1, step 1, step 1, step 1, step 1,</div> 
-            <div>step 1, step 1, step 1, step 1, step 1, step 1, step 1</div>
+          <div className={style.containerIntroduction}>
+            <div className={style.headerStep}>
+              Here is point to START self evolution
+            </div> 
+            <div className={style.introductionStep}>
+              <div>Follow all parts of this section for survival in English speaker world</div>
+              <div>- strong vocabulary</div>
+              <div>- essential grammar</div>
+              <div>- common phrase</div>
+              <div>- and of cause irregular verb</div>
+            </div>
           </div>
         </div>
-        <div className={style.description}>
-          dflkdlfk dlfkldkf dfdl;fk; dlfm;elmv ;efm;ec ;eflm;lemf; lmdlmlmlm dfdnfjb sghbd kbjkbf kfb kb kbjbjkbkb kjbkkbk
+        <div className={style.descriptionStep}>
+          You can take a test to see how ready you are to take this part of evolution. 
+          But highly recommended follow all parts of this section. 
+          It's a base your knowledge.
+          A solid base will give you power in the next steps of evolution
         </div>
-      </div>
-            <div className={style.step}>step 2</div>
-            <div className={style.step}>step 3</div>
-            <div className={style.step}>step 4</div>
-            <div className={style.step}>step 5</div>
-            <div className={style.step}>step 6</div>
+      </div>  
+      <div className={style.stepThird}>
+        <div className={style.containerImageIntroduction}>
+          <div className={style.containerImage}>
+            <Image 
+              src="/start.png"
+              alt="Picture of the author"
+              layout="responsive"
+              width={100}
+              height={100}
+            />
+          </div>
+          <div className={style.containerIntroduction}>
+            <div className={style.headerStep}>
+              Here is point to START self evolution
+            </div> 
+            <div className={style.introductionStep}>
+              <div>Follow all parts of this section for survival in English speaker world</div>
+              <div>- strong vocabulary</div>
+              <div>- essential grammar</div>
+              <div>- common phrase</div>
+              <div>- and of cause irregular verb</div>
+            </div>
+          </div>
+        </div>
+        <div className={style.descriptionStep}>
+          You can take a test to see how ready you are to take this part of evolution. 
+          But highly recommended follow all parts of this section. 
+          It's a base your knowledge.
+          A solid base will give you power in the next steps of evolution
+        </div>
+      </div>    
     </div>
   )
 }
