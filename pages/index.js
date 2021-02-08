@@ -5,6 +5,7 @@ import Header from '../components/header'
 import Link from 'next/link'
 import Footer from '../components/footer'
 import Typing from '../components/typingAnimation'
+import Evolution from '../components/evolution'
 
 
 
@@ -67,14 +68,7 @@ const register = async (req, res) => {
         <section className={style.containerhowItWorks}>
           <div className={style.howItWorks}>How it works</div>
           <div className={style.textHowItWorks}>The teaching concept is based on the natural human desire for evolution. Any kind of learning is evolution. So go ahead ...</div>
-          <div className={style.containerSteps}>
-            <div className={style.step}>step 1</div>
-            <div className={style.step}>step 2</div>
-            <div className={style.step}>step 3</div>
-            <div className={style.step}>step 4</div>
-            <div className={style.step}>step 5</div>
-            <div className={style.step}>step 6</div>
-          </div>
+          <Evolution />
         </section>
       </main>
       <Footer />

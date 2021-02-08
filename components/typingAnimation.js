@@ -41,7 +41,7 @@ export default function Typing() {
           <div ref={position}/>
         </div>
       </div>
-      <div className={style.answer}>Everyone who is just learning English</div>
+      <div className={style.answer}>Everyone who is learning English now</div>
     </div>
   )
 }

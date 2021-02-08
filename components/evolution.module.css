@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerStepDescription {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  margin-bottom: 2em;
+}
+
+.step {
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerImage {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+}
