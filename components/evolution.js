@@ -25,9 +25,9 @@ export default function Evolution() {
             </div> 
             <div className={style.introductionStep}>
               <div>Follow all parts of this section for survival in English speaker world</div>
-              <div>- strong vocabulary</div>
+              <div>- essential vocabulary</div>
               <div>- essential grammar</div>
-              <div>- common phrase</div>
+              <div>- essential common phrase</div>
               <div>- and of cause irregular verb</div>
             </div>
           </div>
@@ -52,22 +52,21 @@ export default function Evolution() {
           </div>
           <div className={style.containerIntroduction}>
             <div className={style.headerStep}>
-              Here is point to START self evolution
+              Here is point to ENJOY self evolution
             </div> 
             <div className={style.introductionStep}>
-              <div>Follow all parts of this section for survival in English speaker world</div>
-              <div>- strong vocabulary</div>
-              <div>- essential grammar</div>
+              <div>Follow all parts of this section to enjoy learning English</div>
+              <div>- vocabulary</div>
+              <div>- grammar</div>
               <div>- common phrase</div>
-              <div>- and of cause irregular verb</div>
+              <div>- and stable expressions</div>
             </div>
           </div>
         </div>
         <div className={style.descriptionStep}>
-          You can take a test to see how ready you are to take this part of evolution. 
-          But highly recommended follow all parts of this section. 
-          It's a base your knowledge.
-          A solid base will give you power in the next steps of evolution
+        This is a huge part of your learning curve. 
+        You can do a lot in English, such as reading, writing, speaking and listening.
+        You will learn a lot here to make your English clear and understandable.
         </div>
       </div>  
       <div className={style.stepThird}>
@@ -83,22 +82,20 @@ export default function Evolution() {
           </div>
           <div className={style.containerIntroduction}>
             <div className={style.headerStep}>
-              Here is point to START self evolution
+              Here is point to PROUD self evolution
             </div> 
             <div className={style.introductionStep}>
-              <div>Follow all parts of this section for survival in English speaker world</div>
-              <div>- strong vocabulary</div>
-              <div>- essential grammar</div>
-              <div>- common phrase</div>
-              <div>- and of cause irregular verb</div>
+              <div>Follow all parts of this section for know English better than native speakers</div>
+              <div>- advance grammar</div>
+              <div>- idioms</div>
+              <div>- complicated tests</div>
             </div>
           </div>
         </div>
         <div className={style.descriptionStep}>
-          You can take a test to see how ready you are to take this part of evolution. 
-          But highly recommended follow all parts of this section. 
-          It's a base your knowledge.
-          A solid base will give you power in the next steps of evolution
+        Did you know that most native speakers don't understand grammar rules? 
+        After completing this part, you can explain grammar to native speakers. 
+        Don't believe me? Go on ....
         </div>
       </div>    
     </div>

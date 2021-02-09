@@ -14,6 +14,23 @@
   background-color: #000000;
 }
 
+.containerImageEvolution {
+  width: 20%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+
+.containerImage {
+  width: 1.5em;
+  height: auto;
+}
+
+.containerImageLast {
+  width: 3em;
+  height: auto;
+}
+
 .slogan {
   font-size: 1.3em;
   color: #ffffff;
