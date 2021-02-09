@@ -35,14 +35,6 @@
   z-index: -1;
 }
 
-.containerPageNav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, .1);
-}
-
 .containerGreeting {
   width: 75%;
   display: flex;
