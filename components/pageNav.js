@@ -9,13 +9,13 @@ export default function PageNav() {
         <a>Home</a>
       </Link>
       <Link href="/essential">
-        <a>Essential</a>
+        <a>Start</a>
       </Link>
       <Link href="/">
-        <a>Good for you</a>
+        <a>Enjoy</a>
       </Link>
       <Link href="/">
-        <a>Fluent</a>
+        <a>Proud</a>
       </Link>
       <Link href="/">
         <a>Blog</a>

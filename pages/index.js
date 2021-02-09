@@ -21,7 +21,9 @@ export default function Home() {
             <source src='/video.mp4' type="video/mp4"/>
           </video>
           <div className={style.shield}></div>
-          <PageNav /> 
+          <div className={style.containerPageNav}>
+            <PageNav /> 
+          </div>
           <section className={style.containerGreeting}>
             <div className={style.EdEnglish}>Ed-English</div>
             <div className={style.textEdEnglish}>
