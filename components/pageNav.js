@@ -23,16 +23,16 @@ export default function PageNav() {
       <Link href="/">
         <a>Home</a>
       </Link>
-      <Link href="/essential">
+      <Link href="/start">
         <a>Start</a>
       </Link>
-      <Link href="/">
+      <Link href="/enjoy">
         <a>Enjoy</a>
       </Link>
-      <Link href="/">
+      <Link href="/proud">
         <a>Proud</a>
       </Link>
-      <Link href="/">
+      <Link href="/blog">
         <a>Blog</a>
       </Link>
       <Link href="/teacher">
@@ -43,7 +43,7 @@ export default function PageNav() {
           <button className={style.buttonFeedback}>feedback</button>
         </a>
       </Link>
-      <Link href="/">
+      <Link href="/tests">
         <a>
           <button className={style.buttonTests}>get tests</button>
         </a>

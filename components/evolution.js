@@ -2,6 +2,7 @@
 
 import style from './evolution.module.css'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 export default function Evolution() {
@@ -21,7 +22,11 @@ export default function Evolution() {
           </div>
           <div className={style.containerIntroduction}>
             <div className={style.headerStep}>
-              Here is point to START self evolution
+              Here is point to 
+                <Link href="/start">
+                  <a className={style.startLink}> START </a>
+                </Link>
+              self evolution
             </div> 
             <div className={style.introductionStep}>
               <div>Follow all parts of this section for survival in English speaker world</div>
@@ -52,7 +57,11 @@ export default function Evolution() {
           </div>
           <div className={style.containerIntroduction}>
             <div className={style.headerStep}>
-              Here is point to ENJOY self evolution
+              Here is point to 
+              <Link href="/enjoy">
+                <a className={style.enjoyLink}> ENJOY </a>
+              </Link>
+              self evolution
             </div> 
             <div className={style.introductionStep}>
               <div>Follow all parts of this section to enjoy learning English</div>
@@ -82,7 +91,11 @@ export default function Evolution() {
           </div>
           <div className={style.containerIntroduction}>
             <div className={style.headerStep}>
-              Here is point to PROUD self evolution
+              Here is point to
+              <Link href="/proud">
+                <a className={style.proudLink}> PROUD </a>
+                </Link>
+              self evolution
             </div> 
             <div className={style.introductionStep}>
               <div>Follow all parts of this section for know English better than native speakers</div>

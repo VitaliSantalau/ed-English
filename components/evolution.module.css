@@ -53,8 +53,11 @@
 
 .headerStep {
   font-size: 1.8em;
-  font-weight: 500;
-  
+  font-weight: 500; 
+}
+
+.startLink, .enjoyLink, .proudLink {
+  color: #0076ffe6;
 }
 
 .introductionStep {

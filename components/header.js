@@ -60,8 +60,7 @@ export default function Header() {
             />
           </div>
         <AuthNav />
-      </div>
-           
+      </div>          
     </header>
   )
 }
