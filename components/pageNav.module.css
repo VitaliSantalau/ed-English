@@ -36,6 +36,10 @@
   color: #000000;
 }
 
+.containerButtonFeedbackForm {
+  position: relative;
+}
+
 .buttonFeedback {
   height: 2em;
   font-size: 1em;
@@ -50,6 +54,22 @@
 .buttonFeedback:hover {
   color: #000000;
   border: .1px solid #000000;
+}
+
+.containerFeedbackShow {
+  width: 15em;
+  height: 12em;
+  position: absolute;
+  top: 0;
+  left: -10;
+  display: flex;
+  border-radius: .3em;
+  background-color: #ffffff;
+  box-shadow: 0 .5em 1em rgba(0,0,0, .25), 0 .5em 1em rgba(0,0,0, .25);
+}
+
+.containerFeedbackHide {
+  display: none;
 }
 
 .buttonTests {
