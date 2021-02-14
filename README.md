@@ -7,6 +7,7 @@ npm i graphql
 npm add graphql-request
 npm add react-datocms
 npm install typed.js
+npm install emailjs-com
 
 GraphQL API Token 
 NEXT_DATOCMS_API_TOKEN = 244e1a33ac9505b6e4622ab51fce51
@@ -25,3 +26,9 @@ DATABASE_URL = mongodb+srv://VitaliSantalau:o60QmfLyOYtjPLrP@cluster0.efytr.mong
 EMAIL_FROM= Ed-English <edenglishmail@gmail.com>
 EMAIL_USERNAME=edenglishmail@gmail.com
 EMAIL_PASSWORD=ed1234567890english
+
+EMAILJS_USERID = user_7CINYP2z8ICW8nhDeIgnc
+EMAILJS_TEMPLATEID = template_2ywozum
+EMAILJS_RECEIVER = 
+EMAILJS_SERVICE_ID = service_ntqo2if
+
