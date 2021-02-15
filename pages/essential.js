@@ -59,7 +59,7 @@ export default function Essential({ data }) {
  
   const [state, dispatch] = useReducer(reducer, initialState) 
 
-  const handleChangeInput= e => {
+  const handleChangeInput = e => {
     dispatch({
       type: "input user answer",
       payload: e.target.value
