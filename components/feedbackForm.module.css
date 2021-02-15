@@ -61,6 +61,9 @@
 }
 
 .successMessage  {
+  position: absolute;
+  top: 0;
+  left: 0;
   font-weight: 700;
   text-align: center;
   width: 100%;
@@ -70,7 +73,9 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  z-index: 11;
   color: #0070f3;
+  background-color: #ffffff;
 }
 
 .successMessage > *, .errorMessage > * {
@@ -78,6 +83,9 @@
 }
 
 .errorMessage {
+  position: absolute;
+  top: 0;
+  left: 0;
   font-weight: 700;
   text-align: center;
   width: 100%;
@@ -87,5 +95,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  z-index: 11;
   color: #000000;
+  background-color: #ffffff;
 }
