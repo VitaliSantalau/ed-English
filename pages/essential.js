@@ -1,4 +1,4 @@
-import style from '../styles/essential.module.css'
+
 import { request } from "../utils/connectToDatoCMS";
 import { Image } from "react-datocms";
 /*import { connectToMongodb } from '../utils/connectToMongodb'*/
