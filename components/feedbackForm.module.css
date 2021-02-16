@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   padding: .5em;
+  border-radius: .3em;
 }
 
 .email, .feedback {
@@ -60,6 +61,10 @@
   border-radius: .2em;
 }
 
+.buttonSend, .buttonClose {
+  cursor: pointer;
+}
+
 .successMessage  {
   position: absolute;
   top: 0;
@@ -76,13 +81,14 @@
   z-index: 11;
   color: #0070f3;
   background-color: #ffffff;
+  border-radius: .3em;
 }
 
 .successMessage > *, .errorMessage > * {
   margin: 1em;
 }
 
-.errorMessage {
+.errorMessage, .validMessage {
   position: absolute;
   top: 0;
   left: 0;
@@ -98,4 +104,5 @@
   z-index: 11;
   color: #000000;
   background-color: #ffffff;
+  border-radius: .3em;
 }
