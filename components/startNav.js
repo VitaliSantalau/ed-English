@@ -1,7 +1,7 @@
-import style from './essentialNav.module.css'
+import style from './startNav.module.css'
 import Link from 'next/link'
 
-export default function EssentialNav() {
+export default function StartNav() {
     
   return (
     <div className={style.container}>
@@ -26,9 +26,6 @@ export default function EssentialNav() {
       </Link>
       <Link href="/">
         <a><h4>Irregular verbs</h4></a>
-      </Link>
-      <Link href="/">
-        <a><h4>Stable expressions</h4></a>
       </Link>
     </div>
     </div>

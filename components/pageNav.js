@@ -28,7 +28,7 @@ export default function PageNav() {
       <Link href="/">
         <a>Home</a>
       </Link>
-      <Link href="/start">
+      <Link href="/start/getting-started">
         <a>Start</a>
       </Link>
       <Link href="/enjoy">

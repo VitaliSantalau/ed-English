@@ -43,8 +43,7 @@ export default function Home() {
     </Layout>
   )
 }
-
-      
+     
 
 export async function getServerSideProps(context) {
   const { db } = await connectToMongodb();

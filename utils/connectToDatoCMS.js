@@ -14,5 +14,6 @@ export function request({ query, variables, preview }) {
       authorization: `Bearer ${process.env.NEXT_DATOCMS_API_TOKEN}`
     }
   });
+  
   return client.request(query, variables);
 }

@@ -1,5 +1,3 @@
-/* https://dev.to/n8tb1t/tracking-scroll-position-with-react-hooks-3bbj */
-
 import style from './evolution.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,7 +11,7 @@ export default function Evolution() {
         <div className={style.containerImageIntroduction}>
           <div className={style.containerImage}>
             <Image 
-              src="/chelovek-drevnego-mira-first-step.jpg"
+              src="/chelovek-drevnego-mira-start.png"
               alt="Picture of the author"
               layout="responsive"
               width={120}
@@ -23,7 +21,7 @@ export default function Evolution() {
           <div className={style.containerIntroduction}>
             <div className={style.headerStep}>
               Here is point to 
-                <Link href="/start">
+                <Link href="/start/getting-started">
                   <a className={style.startLink}> START </a>
                 </Link>
               self evolution
@@ -48,7 +46,7 @@ export default function Evolution() {
         <div className={style.containerImageIntroduction}>
           <div className={style.containerImageSecond}>
             <Image 
-              src="/second.webp"
+              src="/chelovek-drevnego-mira-enjoy.png"
               alt="Picture of the author"
               layout="responsive"
               width={300}
@@ -82,7 +80,7 @@ export default function Evolution() {
         <div className={style.containerImageIntroduction}>
           <div className={style.containerImageThird}>
             <Image 
-              src="/third.jpeg"
+              src="/chelovek-modern-mira-proud.png"
               alt="Picture of the author"
               layout="responsive"
               width={300}
